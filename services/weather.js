@@ -1,5 +1,6 @@
 import {WEB_CONFIG} from '../config/index'
 export const serviceGetWeather = async (body) => {
+  console.log('el body', body)
   const res = await fetch(`${WEB_CONFIG.BASE_URL}`,
     {
       method: 'POST',
