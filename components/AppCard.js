@@ -2,7 +2,7 @@ import {useState} from 'react'
 import {serviceGetWeather} from '../services/weather'
 export const AppCard = () => {
 
-  const [loadedImage, setLoadedImage] = useState("https://img.discogs.com/l3fkUAJb_4UqY0kYQrPr077QyEA=/fit-in/600x554/filters:strip_icc():format(jpeg):mode_rgb():quality(90)/discogs-images/R-16659231-1609105178-7556.png.jpg")
+  const [loadedImage, setLoadedImage] = useState("https://i.redd.it/avo9vpidmzg41.jpg")
   const [city, setCity] = useState('')
   const [weatherRes, setWeatherRes] = useState({})
   const [cityAlbum, setCityAlbum] = useState({})
@@ -46,6 +46,12 @@ export const AppCard = () => {
   }
   return (
     <>
+    <meta property="og:type"            content="body" /> 
+    <meta property="og:url"             content="http://newsblog.org/news/136756249803614" /> 
+    <meta property="og:title"           content="City weather and City Pop" /> 
+    <meta property="og:image"           content="https://i.redd.it/avo9vpidmzg41.jpg" /> 
+    <meta property="og:description"    content="Simple weather and city pop recommendation" />
+  
       <div id="app-container" style={containerStyle} className="bg-no-repeat bg-cover">
         <div style={bluredBack}>
           <div className="font-sans flex flex-col">
