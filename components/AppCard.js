@@ -10,6 +10,7 @@ export const AppCard = () => {
   const [titleValue, setTitleValue] = useState('')
   const [artistValue, setArtistValue] = useState('')
   const [yearValue, setYearValue] = useState('')
+  const [error, setError] = useState(false)
   const containerStyle = {
     height: '100vh',
     backgroundImage: `url("${loadedImage}")`,
@@ -27,6 +28,7 @@ export const AppCard = () => {
   const onRequestWeather = async () => {
     try {
       setLoading(true)
+      setError(false)
       const res = await serviceGetWeather({city: `${city}`})
       const {cityALbum, createdWeather} = res.data
       setWeatherRes(createdWeather.resWeather)
@@ -36,6 +38,9 @@ export const AppCard = () => {
       splitValues(cityALbum)
     } catch (error) {
       setLoading(false)
+      setCityAlbum({})
+      setWeatherRes({})
+      setError(true)
       console.log('error', error)
     }
   }
@@ -64,6 +69,14 @@ export const AppCard = () => {
                 Cargando...
                 </span>
               </div>
+            }
+            {
+              error && !loading && 
+              <>
+                <div className=" bg-white mt-10 p-6 mx-auto max-w-sm rounded shadow-md flex flex-row rounded-xl space-x-4">
+                  <h3 className="text-pink-400 mt-3">A error has occured, please verify city</h3>
+                </div>
+              </>
             }
             { weatherRes && weatherRes.name && !loading &&
               <>
