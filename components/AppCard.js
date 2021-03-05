@@ -46,13 +46,13 @@ export const AppCard = () => {
   }
   return (
     <>
-      <Head>
+      <head>
         <meta property="og:type" content="body"/>
         <meta property="og:url" content="http://newsblog.org/news/136756249803614"/>
         <meta property="og:title" content="City weather and City Pop"/>
         <meta property="og:image" content="https://i.redd.it/avo9vpidmzg41.jpg"/>
         <meta property="og:description" content="Simple weather and city pop recommendation"/>
-      </Head>
+      </head>
       <body>
         <div id="app-container" style={containerStyle} className="bg-no-repeat bg-cover">
           <div style={bluredBack}>
