@@ -28,12 +28,12 @@ export const AppCard = () => {
     try {
       setLoading(true)
       const res = await serviceGetWeather({city: `${city}`})
-      const {cityPopSong, createdWeather} = res.data
+      const {cityALbum, createdWeather} = res.data
       setWeatherRes(createdWeather.resWeather)
-      setCityAlbum(cityPopSong)
-      setLoadedImage(cityPopSong.cover_image)
+      setCityAlbum(cityALbum)
+      setLoadedImage(cityALbum.cover_image)
       setLoading(false)
-      splitValues(cityPopSong)
+      splitValues(cityALbum)
     } catch (error) {
       setLoading(false)
       console.log('error', error)
