@@ -43,7 +43,7 @@ export const SearchInput = ({getInputValue}) => {
           }
         </div>
       }
-      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-5" id="city" type="text" value={inputValue} placeholder="Cityaa" onChange={(e)=>handleChangeCity(e)}/>
+      <input className="shadow appearance-none border rounded w-full py-2 px-3 text-grey-darker mb-5" id="city" type="text" value={inputValue} placeholder="City" onChange={(e)=>handleChangeCity(e)}/>
     </div>
   )
 }

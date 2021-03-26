@@ -1,3 +1,4 @@
+import PaypalButton from '../components/PaypalButton'
 export const Album = ({weatherRes, cityAlbum, titleValue, artistValue, yearValue} ) => {
   return (
     <>
@@ -14,12 +15,12 @@ export const Album = ({weatherRes, cityAlbum, titleValue, artistValue, yearValue
         <div>
           <img src={`${cityAlbum.cover_image}`.includes('spacer.gif') ? 'https://upload.wikimedia.org/wikipedia/commons/a/ac/No_image_available.svg' : cityAlbum.cover_image } alt=""/>
         </div>
-        <div className="flex flex-col pb-6 pt-6">
+        <div className="flex flex-col pb-6 pt-6 m-0">
           <span className="text-pink-400 ">Title: </span> <span className="text-pink-600 font-bold">{titleValue}</span>
           <span className="text-pink-400 mt-3">Artist: </span> <span className="text-pink-600 font-bold">{artistValue}</span>
           <span className="text-pink-400 mt-3">Year: </span> <span className="text-pink-600 font-bold">{yearValue}</span>
-
         </div>
+      <PaypalButton></PaypalButton>
       </div>
     </>
   )

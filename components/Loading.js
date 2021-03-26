@@ -4,7 +4,7 @@ export const Loading = () => {
       <svg className="bg-pink-100 animate-pulse h-5 w-5 mr-3" viewBox="0 0 24 24">
       </svg>
       <span className="text-pink-600">
-      Cargando...
+        Loading...
       </span>
     </div>
   )
